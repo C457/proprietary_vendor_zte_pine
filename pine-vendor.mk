@@ -168,6 +168,7 @@ PRODUCT_COPY_FILES += \
     vendor/zte/pine/proprietary/vendor/bin/diag_mdlog:$(TARGET_COPY_OUT_VENDOR)/bin/diag_mdlog \
     vendor/zte/pine/proprietary/vendor/bin/dpmQmiMgr:$(TARGET_COPY_OUT_VENDOR)/bin/dpmQmiMgr \
     vendor/zte/pine/proprietary/vendor/bin/garden_app:$(TARGET_COPY_OUT_VENDOR)/bin/garden_app \
+    vendor/zte/pine/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service \
     vendor/zte/pine/proprietary/vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.bluetooth@1.0-service-qti \
     vendor/zte/pine/proprietary/vendor/bin/hw/android.hardware.drm@1.1-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.1-service.widevine \
     vendor/zte/pine/proprietary/vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.gatekeeper@1.0-service-qti \
@@ -344,6 +345,7 @@ PRODUCT_COPY_FILES += \
     vendor/zte/pine/proprietary/vendor/etc/dts/voice_accessory48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/voice_accessory48 \
     vendor/zte/pine/proprietary/vendor/etc/dts/voice_speaker48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/voice_speaker48 \
     vendor/zte/pine/proprietary/vendor/etc/gpfspath_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gpfspath_oem_config.xml \
+    vendor/zte/pine/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc \
     vendor/zte/pine/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
     vendor/zte/pine/proprietary/vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.1-service.widevine.rc \
     vendor/zte/pine/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
@@ -955,6 +957,7 @@ PRODUCT_COPY_FILES += \
     vendor/zte/pine/proprietary/vendor/lib64/hw/com.qti.chi.override.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.qti.chi.override.so \
     vendor/zte/pine/proprietary/vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so \
     vendor/zte/pine/proprietary/vendor/lib64/hw/com.qualcomm.qti.bluetooth_audio@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.qualcomm.qti.bluetooth_audio@1.0-impl.so \
+    vendor/zte/pine/proprietary/vendor/lib64/hw/fingerprint.gf95xx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.gf95xx.so \
     vendor/zte/pine/proprietary/vendor/lib64/hw/hwcomposer.msmnile.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/hwcomposer.msmnile.so \
     vendor/zte/pine/proprietary/vendor/lib64/hw/lights.msmnile.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/lights.msmnile.so \
     vendor/zte/pine/proprietary/vendor/lib64/hw/sound_trigger.primary.msmnile.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sound_trigger.primary.msmnile.so \
@@ -1091,6 +1094,7 @@ PRODUCT_COPY_FILES += \
     vendor/zte/pine/proprietary/vendor/lib64/libgcs.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgcs.so \
     vendor/zte/pine/proprietary/vendor/lib64/libgdtap.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgdtap.so \
     vendor/zte/pine/proprietary/vendor/lib64/libgeofence.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgeofence.so \
+    vendor/zte/pine/proprietary/vendor/lib64/libgf_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgf_hal.so \
     vendor/zte/pine/proprietary/vendor/lib64/libgnss.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgnss.so \
     vendor/zte/pine/proprietary/vendor/lib64/libgnsspps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgnsspps.so \
     vendor/zte/pine/proprietary/vendor/lib64/libgps.utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgps.utils.so \
@@ -1228,6 +1232,7 @@ PRODUCT_COPY_FILES += \
     vendor/zte/pine/proprietary/vendor/lib64/libtinycompress_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinycompress_vendor.so \
     vendor/zte/pine/proprietary/vendor/lib64/libtinyxml2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinyxml2_1.so \
     vendor/zte/pine/proprietary/vendor/lib64/libtzdrmgenprov.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtzdrmgenprov.so \
+    vendor/zte/pine/proprietary/vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so \
     vendor/zte/pine/proprietary/vendor/lib64/libvendorcfg_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvendorcfg_vendor.so \
     vendor/zte/pine/proprietary/vendor/lib64/libvendorutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvendorutils.so \
     vendor/zte/pine/proprietary/vendor/lib64/libvppclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvppclient.so \
