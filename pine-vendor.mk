@@ -1323,6 +1323,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libantradio \
     libsdm-disp-vndapis \
+    DtsUltra \
     NfcNci_zte \
     QtiTelephonyService \
     uceShimService \
