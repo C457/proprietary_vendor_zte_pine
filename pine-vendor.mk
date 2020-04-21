@@ -316,7 +316,6 @@ PRODUCT_COPY_FILES += \
     vendor/zte/pine/proprietary/vendor/etc/dts/custom_accessory44:$(TARGET_COPY_OUT_VENDOR)/etc/dts/custom_accessory44 \
     vendor/zte/pine/proprietary/vendor/etc/dts/custom_accessory48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/custom_accessory48 \
     vendor/zte/pine/proprietary/vendor/etc/dts/custom_speaker48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/custom_speaker48 \
-    vendor/zte/pine/proprietary/vendor/etc/dts/customer.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/dts/customer.cfg \
     vendor/zte/pine/proprietary/vendor/etc/dts/default_accessory44:$(TARGET_COPY_OUT_VENDOR)/etc/dts/default_accessory44 \
     vendor/zte/pine/proprietary/vendor/etc/dts/default_accessory48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/default_accessory48 \
     vendor/zte/pine/proprietary/vendor/etc/dts/default_speaker48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/default_speaker48 \
