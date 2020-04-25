@@ -1,4 +1,4 @@
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2019-2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -218,7 +218,6 @@ PRODUCT_COPY_FILES += \
     vendor/zte/pine/proprietary/vendor/bin/sensors.qti:$(TARGET_COPY_OUT_VENDOR)/bin/sensors.qti \
     vendor/zte/pine/proprietary/vendor/bin/slim_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/slim_daemon \
     vendor/zte/pine/proprietary/vendor/bin/sscrpcd:$(TARGET_COPY_OUT_VENDOR)/bin/sscrpcd \
-    vendor/zte/pine/proprietary/vendor/bin/ssdaemon_vendor:$(TARGET_COPY_OUT_VENDOR)/bin/ssdaemon_vendor \
     vendor/zte/pine/proprietary/vendor/bin/tftp_server:$(TARGET_COPY_OUT_VENDOR)/bin/tftp_server \
     vendor/zte/pine/proprietary/vendor/bin/thermal-engine:$(TARGET_COPY_OUT_VENDOR)/bin/thermal-engine \
     vendor/zte/pine/proprietary/vendor/bin/time_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/time_daemon \
@@ -353,7 +352,6 @@ PRODUCT_COPY_FILES += \
     vendor/zte/pine/proprietary/vendor/etc/init/qcrild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qcrild.rc \
     vendor/zte/pine/proprietary/vendor/etc/init/qdcmss.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qdcmss.rc \
     vendor/zte/pine/proprietary/vendor/etc/init/remosaic_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/remosaic_daemon.rc \
-    vendor/zte/pine/proprietary/vendor/etc/init/ssdaemon_vendor.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ssdaemon_vendor.rc \
     vendor/zte/pine/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
     vendor/zte/pine/proprietary/vendor/etc/init/vendor.hardware.zte.wifi@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.hardware.zte.wifi@1.0-service.rc \
     vendor/zte/pine/proprietary/vendor/etc/init/vendor.qti.esepowermanager@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.esepowermanager@1.0-service.rc \
@@ -1196,9 +1194,7 @@ PRODUCT_COPY_FILES += \
     vendor/zte/pine/proprietary/vendor/lib64/libsdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdsprpc.so \
     vendor/zte/pine/proprietary/vendor/lib64/libsecureui.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsecureui.so \
     vendor/zte/pine/proprietary/vendor/lib64/libsecureui_svcsock.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsecureui_svcsock.so \
-    vendor/zte/pine/proprietary/vendor/lib64/libsensorapi_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensorapi_vendor.so \
     vendor/zte/pine/proprietary/vendor/lib64/libsensorcal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensorcal.so \
-    vendor/zte/pine/proprietary/vendor/lib64/libsensorcal_vendor_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensorcal_vendor_vendor.so \
     vendor/zte/pine/proprietary/vendor/lib64/libsensorndkbridge.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensorndkbridge.so \
     vendor/zte/pine/proprietary/vendor/lib64/libsensorslog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensorslog.so \
     vendor/zte/pine/proprietary/vendor/lib64/libsettings.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsettings.so \
@@ -1210,8 +1206,6 @@ PRODUCT_COPY_FILES += \
     vendor/zte/pine/proprietary/vendor/lib64/libsnsdiaglog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsnsdiaglog.so \
     vendor/zte/pine/proprietary/vendor/lib64/libspcom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libspcom.so \
     vendor/zte/pine/proprietary/vendor/lib64/libspl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libspl.so \
-    vendor/zte/pine/proprietary/vendor/lib64/libss-base.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libss-base.so \
-    vendor/zte/pine/proprietary/vendor/lib64/libss-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libss-qti.so \
     vendor/zte/pine/proprietary/vendor/lib64/libssc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssc.so \
     vendor/zte/pine/proprietary/vendor/lib64/libssc_default_listener.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssc_default_listener.so \
     vendor/zte/pine/proprietary/vendor/lib64/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssd.so \
@@ -1227,7 +1221,6 @@ PRODUCT_COPY_FILES += \
     vendor/zte/pine/proprietary/vendor/lib64/libtinycompress_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinycompress_vendor.so \
     vendor/zte/pine/proprietary/vendor/lib64/libtinyxml2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinyxml2_1.so \
     vendor/zte/pine/proprietary/vendor/lib64/libtzdrmgenprov.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtzdrmgenprov.so \
-    vendor/zte/pine/proprietary/vendor/lib64/libvendorcfg_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvendorcfg_vendor.so \
     vendor/zte/pine/proprietary/vendor/lib64/libvendorutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvendorutils.so \
     vendor/zte/pine/proprietary/vendor/lib64/libvppclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvppclient.so \
     vendor/zte/pine/proprietary/vendor/lib64/libvpphcp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpphcp.so \
@@ -1311,7 +1304,6 @@ PRODUCT_COPY_FILES += \
     vendor/zte/pine/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@1.0.so \
     vendor/zte/pine/proprietary/vendor/lib64/vendor.qti.latency@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.latency@2.0.so \
     vendor/zte/pine/proprietary/vendor/lib64/vendor.zte.hardware.radio@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.zte.hardware.radio@1.0.so \
-    vendor/zte/pine/proprietary/vendor/lib64/vendor.zte.subsys@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.zte.subsys@1.0.so \
     vendor/zte/pine/proprietary/vendor/radio/qcril_database/qcril.db:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/qcril.db \
     vendor/zte/pine/proprietary/vendor/radio/qcril_database/upgrade/0_initial.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/0_initial.sql \
     vendor/zte/pine/proprietary/vendor/radio/qcril_database/upgrade/1_version_intro.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/1_version_intro.sql \
