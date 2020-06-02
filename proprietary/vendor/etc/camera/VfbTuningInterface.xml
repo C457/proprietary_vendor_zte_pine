@@ -1,115 +1,96 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <TuningInterface version="1.2">
-
-
-    <EyeCircles>
-        <!-- 
+  <EyeCircles>
+    <!-- 
             When faces dissapear or new faces are detected they are gradualy removed or added to the processing 
             in order to prevent sudden transitions. 
             This parameter can be use to accelerate/slow down this transition process. 
         -->
-        <double name="Video_Convergence_Eye_Weight"> 0.05 </double>
-    </EyeCircles>
-
-
-    <EyeEnlargement>
-        <!--
+    <double name="Video_Convergence_Eye_Weight">0.05</double>
+  </EyeCircles>
+  <EyeEnlargement>
+    <!--
             When eyes dissapear or new eyes are detected they are gradualy removed or added to the processing 
             in order to prevent sudden transitions. 
             This parameter can be use to accelerate/slow down this transition process.
         -->
-        <double name="Video_Convergence_Eye_Weight"> 0.05 </double>
-
-        <!--
+    <double name="Video_Convergence_Eye_Weight">0.05</double>
+    <!--
             Controls how fast eye enlargement converges to its real strength.
             This parameter prevents sudden distortions when eye position changes or when the eyes are lost.
             Increase it to accelerate the convergence.
         -->
-        <double name="Video_Convergence_Eye_Alpha"> 0.5 </double>
-    </EyeEnlargement>
-
-
-    <Slimming>
-        <!--
+    <double name="Video_Convergence_Eye_Alpha">0.50</double>
+  </EyeEnlargement>
+  <Slimming>
+    <!--
             Tells the slimming algorithm to use either double precision or fixed point arithmetics when computing
             the slimming grid.
         -->
-        <bool name="Use_Double_Precision"> true </bool>
-
-        <!--
+    <bool name="Use_Double_Precision">true</bool>
+    <!--
             The maximum slimming level. Increase this value to obtain a more aggressive effect. (range [0..255])
         -->
-        <uint8 name="Max_Level"> 195 </uint8>
-
-        <!--
+    <uint8 name="Max_Level">195</uint8>
+    <!--
             Controls how fast slimming converges to its real strength.
             This parameters prevents sudden distortions when faces are lost or detected.
             Increase it to accelerate the convergence. (range [0, 1])
         -->
-        <double name="Video_Convergence_Alpha"> 0.75 </double>
-		<!--
+    <double name="Video_Convergence_Alpha">0.75</double>
+    <!--
             The yaw angle threshold in degrees. If the face has a yaw angle larger than this value, the mouth area is not entirely protected.
         -->
-		<uint8 name="Slimming_Yaw_Angle_Abs_Threshold"> 30 </uint8>
-    </Slimming>
-
-
-    <SmartColor>
-        <!--
+    <uint8 name="Slimming_Yaw_Angle_Abs_Threshold">30</uint8>
+  </Slimming>
+  <SmartColor>
+    <!--
             Controls how fast the color correction converges to its real strength.
             This parameter prevents sudden distortions when faces are lost or detected.
             Decrease it to accelerate the convergence.
         -->
-        <double name="Video_Convergence_Alpha"> 0.9 </double>
-
-        <!--
+    <double name="Video_Convergence_Alpha">0.90</double>
+    <!--
             If true, red faces are not made less red by SmartColor.
         -->
-        <bool name="Preserve_Redness"> true </bool>
-    </SmartColor>
-
-
-    <SmartLight>
-        <!--
+    <bool name="Preserve_Redness">true</bool>
+  </SmartColor>
+  <SmartLight>
+    <!--
             When a lightening curve is applied to the face/image, this LUT gives the weight of the lightening 
             depending on the mean value of the face.
         -->
     <array type="double" size="256" name="GammaValues">0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65,0.65</array>
-        <!-- For the Windows Demo -->
-        <array type="int32" size="2" name="GammaValues_KeyPoints_X">118,160</array>
-        <array type="int32" size="2" name="GammaValues_KeyPoints_Y">68,0</array>
-
-        <!--
+    <!-- For the Windows Demo -->
+    <array type="int32" size="2" name="GammaValues_KeyPoints_X">118,160</array>
+    <array type="int32" size="2" name="GammaValues_KeyPoints_Y">68,0</array>
+    <!--
             Percentages that control how many levels are sampled from the entire image, respectively from the face.
         -->
     <double name="SampleLevel_Img_LoPrc">0.00</double>
     <double name="SampleLevel_Img_HiPrc">99.80</double>
     <double name="SampleLevel_Face_LoPrc">0.00</double>
     <double name="SampleLevel_Face_HiPrc">99.80</double>
-
-        <!--
+    <!--
             Gives the difference in lightening between the face and the rest of the image.
             Make it a larger value to have less lightened image than the face.
         -->
     <double name="Gamma_CurveDiff">3.00</double>
-
-        <!--
+    <!--
             Controls the lightening. 
             Make it smaller to increase the effect.
         -->
-        <double name="Gamma_AlphaFace_Factor"> 0.40 </double>
-
-        <!--
+    <double name="Gamma_AlphaFace_Factor">0.40</double>
+    <!--
             Curves for more or less lightening and also for different look of the lightening 
             (for the entire image and for the face region).
         -->
     <array type="uint8" size="256" name="Gamma_Img_AdjustCurve">1,2,4,6,8,10,11,13,15,17,19,21,22,24,26,28,30,32,33,35,37,39,41,42,44,46,48,50,51,53,55,57,59,60,62,64,66,67,69,71,73,74,76,78,80,81,83,85,86,88,90,92,93,95,97,98,100,102,103,105,106,108,110,111,113,115,116,118,119,121,122,124,126,127,129,130,132,133,135,136,138,139,141,142,144,145,146,148,149,151,152,153,155,156,158,159,160,162,163,164,165,167,168,169,170,172,173,174,175,177,178,179,180,181,182,183,185,185,186,187,188,189,190,191,192,192,193,194,195,196,197,197,198,199,200,200,201,202,203,203,204,205,206,206,207,208,208,209,210,210,211,212,212,213,214,214,215,215,216,217,217,218,218,219,220,220,221,221,222,222,223,223,224,224,225,225,226,226,227,227,228,228,229,229,230,230,231,231,232,232,232,233,233,234,234,235,235,235,236,236,237,237,237,238,238,238,239,239,240,240,240,241,241,241,242,242,242,243,243,244,244,244,245,245,245,246,246,246,246,247,247,247,248,248,248,249,249,249,250,250,250,251,251,251,251,252,252,252,253,253,253,254,254,254,255,255</array>
-        <!-- For the Windows Demo -->
+    <!-- For the Windows Demo -->
     <array type="int32" size="5" name="Gamma_Img_AdjustCurve_KeyPoints_X">1,123,269</array>
     <array type="int32" size="5" name="Gamma_Img_AdjustCurve_KeyPoints_Y">269,75,0</array>
     <array type="uint8" size="256" name="Gamma_Face_AdjustCurve">2,2,3,4,5,6,7,8,9,10,12,13,14,16,18,19,21,23,26,28,30,33,36,39,42,46,47,48,49,51,52,53,55,56,57,59,60,62,63,65,66,68,69,71,72,74,75,77,79,80,82,84,85,87,89,90,92,94,95,97,99,100,102,104,105,107,109,111,112,114,116,117,119,121,122,124,126,127,129,131,132,134,136,137,139,140,142,143,145,147,148,150,151,152,154,155,157,158,160,161,162,163,164,165,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,183,184,185,186,187,188,189,189,190,191,192,192,193,194,195,195,196,197,197,198,199,199,200,201,201,202,202,203,204,204,205,205,206,206,207,208,208,209,209,210,210,211,211,212,212,213,213,214,214,215,215,215,216,216,217,217,218,218,219,219,220,221,222,223,223,224,225,226,226,227,228,228,229,230,231,231,232,233,233,234,234,235,236,236,237,237,238,238,239,239,240,240,241,241,242,242,243,243,244,244,245,245,245,246,246,247,247,248,248,248,249,249,249,250,250,250,251,251,251,251,252,252,252,252,253,253,253,253,253,254,254,254,254,255,255</array>
-        <!-- For the Windows Demo -->
+    <!-- For the Windows Demo -->
     <array type="int32" size="5" name="Gamma_Face_AdjustCurve_KeyPoints_X">0,27,104,190,235,269</array>
     <array type="int32" size="5" name="Gamma_Face_AdjustCurve_KeyPoints_Y">268,222,101,39,11,0</array>
     <!--Applies the curves without analyzing the faces first -->
@@ -119,73 +100,67 @@
             This parameter prevents sudden distortions when faces are lost or detected.
             Decrease it to accelerate the convergence.
         -->
-        <double name="Video_Convergence_Alpha"> 0.5 </double>
-    </SmartLight>
-
-
-    <SmoothingToning>
-        <!--
+    <double name="Video_Convergence_Alpha">0.50</double>
+  </SmartLight>
+  <SmoothingToning>
+    <!--
             Controls the sharpening level (the added details/texture) on the face (respectively the image) after applying 
             the smoothing effect. Increase it to get more visible details.
             Current implementation does not allow values larger than 1 (the effect will be the same as at 1)
         -->
-        <float name="Smoothing_Still_Sharpening_Details_Face"> 0.25f </float>
-        <float name="Smoothing_Still_Sharpening_Details_Img">  0.5f </float>
-
-        <!--
+    <float name="Smoothing_Still_Sharpening_Details_Face">0.25f</float>
+    <float name="Smoothing_Still_Sharpening_Details_Img">0.50f</float>
+    <!--
             Controls the max value for 3D Look
         -->
-        <float name="Still_Sharpening_Details_Max_3DLook"> 1.0f </float>
-
-        <!--
+    <float name="Still_Sharpening_Details_Max_3DLook">1.00f</float>
+    <!--
             Both of the following weights control the sharpening:
              - the blur on Y (luminance) controls the aspect of the texture on the face (decrease it for more details)
              - the blur on UV (chrominances) improves the color on the face and also makes saturated areas, such as lips,
                leak the color in the surrounding area
         -->
-        <float name="Smoothing_Still_Sharpening_BlurYsmall_Weight">  0.01f </float>
-        <float name="Smoothing_Still_Sharpening_BlurYmedium_Weight"> 0.25f </float>
-        <float name="Smoothing_Still_Sharpening_BlurUV_Weight">      0.01f </float>
-
-        <!--
+    <float name="Smoothing_Still_Sharpening_BlurYsmall_Weight">0.01f</float>
+    <float name="Smoothing_Still_Sharpening_BlurYmedium_Weight">0.25f</float>
+    <float name="Smoothing_Still_Sharpening_BlurUV_Weight">0.01f</float>
+    <!--
             Controls how much the guided smoothing is done.
             Decrease it to preserve better contours (the 3D effect of the facial features 
             might be better but the smoothing will seem less as well).
         -->
-        <float name="Smoothing_Still_GuidedFiltering_Epsilon"> 0.05f </float>
-
-        <!--
+    <float name="Smoothing_Still_GuidedFiltering_Epsilon">0.05f</float>
+    <!--
             Controls the guided filtering.
             Larger values attenuate high frequency details whilst smaller values preserve them.
         -->
-        <float name="Smoothing_Still_GuidedFiltering_Kernel_Weight"> 0.01f </float>
-
-        <!--
+    <float name="Smoothing_Still_GuidedFiltering_Kernel_Weight">0.01f</float>
+    <!--
+            Controls the smoothing strength specifically for mouth area.
+            Larger values indicate stronger smoothing around the mouth. (range [0.0, 1.0])
+        -->
+    <float name="Smoothing_Still_MouthArea_Protection_Factor">0.25f</float>
+    <!--
             Controls wether the smothing at the face edges is more subtle. Affects the overall smoothing effect.
         -->
-        <float name="Smoothing_Alpha_Blending_And_Color_Smoother_Edges"> 0.0f </float> 
-
-        <!--
+    <float name="Smoothing_Alpha_Blending_And_Color_Smoother_Edges">0.00f</float>
+    <!--
             Whitening. Control the saturation. Increase them to reduce the saturation. 
         -->
     <float name="Toning_Still_Saturation_U_WHITE">0.05f</float>
     <float name="Toning_Still_Saturation_V_WHITE">0.00f</float>
-
-        <!--
+    <!--
             Whitening. Control the toning luminance curve (polynomial parameters).
         -->
-        <float name="Toning_K1_WHITE">  0.0f </float> 
-        <float name="Toning_K2_WHITE">  2.2f </float> 
-        <float name="Toning_K3_WHITE"> -1.5f </float> 
-        <float name="Toning_K4_WHITE">  0.3f </float> 
-
-        <!--
+    <float name="Toning_K1_WHITE">0.00f</float>
+    <float name="Toning_K2_WHITE">2.20f</float>
+    <float name="Toning_K3_WHITE">-1.50f</float>
+    <float name="Toning_K4_WHITE">0.30f</float>
+    <!--
             Tanning. Control the saturation. Increase them to reduce the saturation. 
         -->
-        <float name="Toning_Still_Saturation_U_TAN">  0.00f </float>
-        <float name="Toning_Still_Saturation_V_TAN"> -0.02f </float> 
-
-        <!--
+    <float name="Toning_Still_Saturation_U_TAN">0.00f</float>
+    <float name="Toning_Still_Saturation_V_TAN">-0.02f</float>
+    <!--
             Tanning. Control the toning luminance curve (polynomial parameters).
         -->
         <float name="Toning_K1_TAN"> -0.0121f </float> 
@@ -196,53 +171,44 @@
         <!--
             Red. Control the saturation. Increase them to reduce the saturation. 
         -->
-        <float name="Toning_Still_Saturation_U_RED">  0.0f </float>
-        <float name="Toning_Still_Saturation_V_RED"> -0.1f </float> 
-
-        <!--
+    <float name="Toning_Still_Saturation_U_RED">0.00f</float>
+    <float name="Toning_Still_Saturation_V_RED">-0.10f</float>
+    <!--
             Red. Control the toning luminance curve (polynomial parameters).
         -->
-        <float name="Toning_K1_RED">  0.00f </float> 
-        <float name="Toning_K2_RED">  1.60f </float> 
-        <float name="Toning_K3_RED"> -0.75f </float> 
-        <float name="Toning_K4_RED">  0.15f </float>
-
-        <!--
+    <float name="Toning_K1_RED">0.00f</float>
+    <float name="Toning_K2_RED">1.60f</float>
+    <float name="Toning_K3_RED">-0.75f</float>
+    <float name="Toning_K4_RED">0.15f</float>
+    <!--
             Controls overall face saturation (>1 saturate, <1 desaturate).
         -->
     <float name="Toning_Saturation_Overall">0.80f</float>
-
-        <!--
+    <!--
             When faces dissapear or new faces are detected they are gradualy removed or added to the current skin profile.
             This parameter can bed use to accelerate/slow down this transition process.
         -->
-        <double name="Smoothing_Toning_Video_Convergence_Face_Weight"> 0.01 </double>
-
-        <!--
+    <double name="Smoothing_Toning_Video_Convergence_Face_Weight">0.01</double>
+    <!--
             Controls when a face info should change its contribution to the current skin profile. 
             For example if this parameter is 3 it means that at every 3 frames, the face skin would 
             contribute to the current skin profile. (i.e. the face contribution weight is updated)
         -->
-        <int32 name="Smoothing_Toning_Video_Convergence_Face_FrameDiscretization"> 1 </int32>
-
-        <!--
+    <int32 name="Smoothing_Toning_Video_Convergence_Face_FrameDiscretization">1</int32>
+    <!--
             Tells that if the face was not detected for the given number of frames it should be considered as being
             completely lost and removed from the current skin profile.
         -->
-        <int32 name="Smoothing_Toning_Video_Convergence_Face_LostForLastFrameCount"> 5 </int32>
-        
-        <!--
+    <int32 name="Smoothing_Toning_Video_Convergence_Face_LostForLastFrameCount">5</int32>
+    <!--
             Specify threshold resolutions for LOG_DOWN_FACTOR, when computing Smoothing / Toning texture sizes
             Recommended values are: (320, 960) - default; (640, 1920) - capable platforms; (1280, 3840) - high end platforms
-        -->        
-        <int32 name="Log_Down_Threshold1"> 320 </int32>
-        <int32 name="Log_Down_Threshold2"> 960 </int32>
-
-    </SmoothingToning>
-
-
-<ColorFilters>
-        <!--
+        -->
+    <int32 name="Log_Down_Threshold1">320</int32>
+    <int32 name="Log_Down_Threshold2">960</int32>
+  </SmoothingToning>
+  <ColorFilters>
+    <!--
             Color Filter LUTs
         -->
     <array type="uint8" size="1536" name="lut_3D_effect_00">0,0,0,36,0,0,72,0,0,109,0,0,145,0,0,182,0,0,218,0,0,255,0,0,0,36,0,36,36,0,72,36,0,109,36,0,145,36,0,182,36,0,218,36,0,255,36,0,0,72,0,36,72,0,72,72,0,109,72,0,145,72,0,182,72,0,218,72,0,255,72,0,0,109,0,36,109,0,72,109,0,109,109,0,145,109,0,182,109,0,218,109,0,255,109,0,0,145,0,36,145,0,72,145,0,109,145,0,145,145,0,182,145,0,218,145,0,255,145,0,0,182,0,36,182,0,72,182,0,109,182,0,145,182,0,182,182,0,218,182,0,255,182,0,0,218,0,36,218,0,72,218,0,109,218,0,145,218,0,182,218,0,218,218,0,255,218,0,0,255,0,36,255,0,72,255,0,109,255,0,145,255,0,182,255,0,218,255,0,255,255,0,0,0,36,36,0,36,72,0,36,109,0,36,145,0,36,182,0,36,218,0,36,255,0,36,0,36,36,36,36,36,72,36,36,109,36,36,145,36,36,182,36,36,218,36,36,255,36,36,0,72,36,36,72,36,72,72,36,109,72,36,145,72,36,182,72,36,218,72,36,255,72,36,0,109,36,36,109,36,72,109,36,109,109,36,145,109,36,182,109,36,218,109,36,255,109,36,0,145,36,36,145,36,72,145,36,109,145,36,145,145,36,182,145,36,218,145,36,255,145,36,0,182,36,36,182,36,72,182,36,109,182,36,145,182,36,182,182,36,218,182,36,255,182,36,0,218,36,36,218,36,72,218,36,109,218,36,145,218,36,182,218,36,218,218,36,255,218,36,0,255,36,36,255,36,72,255,36,109,255,36,145,255,36,182,255,36,218,255,36,255,255,36,0,0,72,36,0,72,72,0,72,109,0,72,145,0,72,182,0,72,218,0,72,255,0,72,0,36,72,36,36,72,72,36,72,109,36,72,145,36,72,182,36,72,218,36,72,255,36,72,0,72,72,36,72,72,72,72,72,109,72,72,145,72,72,182,72,72,218,72,72,255,72,72,0,109,72,36,109,72,72,109,72,109,109,72,145,109,72,182,109,72,218,109,72,255,109,72,0,145,72,36,145,72,72,145,72,109,145,72,145,145,72,182,145,72,218,145,72,255,145,72,0,182,72,36,182,72,72,182,72,109,182,72,145,182,72,182,182,72,218,182,72,255,182,72,0,218,72,36,218,72,72,218,72,109,218,72,145,218,72,182,218,72,218,218,72,255,218,72,0,255,72,36,255,72,72,255,72,109,255,72,145,255,72,182,255,72,218,255,72,255,255,72,0,0,109,36,0,109,72,0,109,109,0,109,145,0,109,182,0,109,218,0,109,255,0,109,0,36,109,36,36,109,72,36,109,109,36,109,145,36,109,182,36,109,218,36,109,255,36,109,0,72,109,36,72,109,72,72,109,109,72,109,145,72,109,182,72,109,218,72,109,255,72,109,0,109,109,36,109,109,72,109,109,109,109,109,145,109,109,182,109,109,218,109,109,255,109,109,0,145,109,36,145,109,72,145,109,109,145,109,145,145,109,182,145,109,218,145,109,255,145,109,0,182,109,36,182,109,72,182,109,109,182,109,145,182,109,182,182,109,218,182,109,255,182,109,0,218,109,36,218,109,72,218,109,109,218,109,145,218,109,182,218,109,218,218,109,255,218,109,0,255,109,36,255,109,72,255,109,109,255,109,145,255,109,182,255,109,218,255,109,255,255,109,0,0,145,36,0,145,72,0,145,109,0,145,145,0,145,182,0,145,218,0,145,255,0,145,0,36,145,36,36,145,72,36,145,109,36,145,145,36,145,182,36,145,218,36,145,255,36,145,0,72,145,36,72,145,72,72,145,109,72,145,145,72,145,182,72,145,218,72,145,255,72,145,0,109,145,36,109,145,72,109,145,109,109,145,145,109,145,182,109,145,218,109,145,255,109,145,0,145,145,36,145,145,72,145,145,109,145,145,145,145,145,182,145,145,218,145,145,255,145,145,0,182,145,36,182,145,72,182,145,109,182,145,145,182,145,182,182,145,218,182,145,255,182,145,0,218,145,36,218,145,72,218,145,109,218,145,145,218,145,182,218,145,218,218,145,255,218,145,0,255,145,36,255,145,72,255,145,109,255,145,145,255,145,182,255,145,218,255,145,255,255,145,0,0,182,36,0,182,72,0,182,109,0,182,145,0,182,182,0,182,218,0,182,255,0,182,0,36,182,36,36,182,72,36,182,109,36,182,145,36,182,182,36,182,218,36,182,255,36,182,0,72,182,36,72,182,72,72,182,109,72,182,145,72,182,182,72,182,218,72,182,255,72,182,0,109,182,36,109,182,72,109,182,109,109,182,145,109,182,182,109,182,218,109,182,255,109,182,0,145,182,36,145,182,72,145,182,109,145,182,145,145,182,182,145,182,218,145,182,255,145,182,0,182,182,36,182,182,72,182,182,109,182,182,145,182,182,182,182,182,218,182,182,255,182,182,0,218,182,36,218,182,72,218,182,109,218,182,145,218,182,182,218,182,218,218,182,255,218,182,0,255,182,36,255,182,72,255,182,109,255,182,145,255,182,182,255,182,218,255,182,255,255,182,0,0,218,36,0,218,72,0,218,109,0,218,145,0,218,182,0,218,218,0,218,255,0,218,0,36,218,36,36,218,72,36,218,109,36,218,145,36,218,182,36,218,218,36,218,255,36,218,0,72,218,36,72,218,72,72,218,109,72,218,145,72,218,182,72,218,218,72,218,255,72,218,0,109,218,36,109,218,72,109,218,109,109,218,145,109,218,182,109,218,218,109,218,255,109,218,0,145,218,36,145,218,72,145,218,109,145,218,145,145,218,182,145,218,218,145,218,255,145,218,0,182,218,36,182,218,72,182,218,109,182,218,145,182,218,182,182,218,218,182,218,255,182,218,0,218,218,36,218,218,72,218,218,109,218,218,145,218,218,182,218,218,218,218,218,255,218,218,0,255,218,36,255,218,72,255,218,109,255,218,145,255,218,182,255,218,218,255,218,255,255,218,0,0,255,36,0,255,72,0,255,109,0,255,145,0,255,182,0,255,218,0,255,255,0,255,0,36,255,36,36,255,72,36,255,109,36,255,145,36,255,182,36,255,218,36,255,255,36,255,0,72,255,36,72,255,72,72,255,109,72,255,145,72,255,182,72,255,218,72,255,255,72,255,0,109,255,36,109,255,72,109,255,109,109,255,145,109,255,182,109,255,218,109,255,255,109,255,0,145,255,36,145,255,72,145,255,109,145,255,145,145,255,182,145,255,218,145,255,255,145,255,0,182,255,36,182,255,72,182,255,109,182,255,145,182,255,182,182,255,218,182,255,255,182,255,0,218,255,36,218,255,72,218,255,109,218,255,145,218,255,182,218,255,218,218,255,255,218,255,0,255,255,36,255,255,72,255,255,109,255,255,145,255,255,182,255,255,218,255,255,255,255,255 </array>
@@ -273,20 +239,16 @@
             Separate controls for sharpening and saturation
         -->
     <float name="Lips_Sharpness">0.00f</float>
-        <float name="Lips_Saturation"> 1.0f </float>
-    </LipsPerfect>
-
-
-    <Deflash>
-	<!--
+    <float name="Lips_Saturation">1.00f</float>
+  </LipsPerfect>
+  <Deflash>
+    <!--
             Controls the sharpening level (the added details/texture) on the corrected area after applying 
             the deflash effect. Increase it to get more visible details.
              Current implementation does not allow values larger than 1 (the effect will be the same as at 1)
         -->
-        <float name="Deflash_Sharpening"> 0.5f </float>
-    </Deflash>
-
-
+    <float name="Deflash_Sharpening">0.50f</float>
+  </Deflash>
   <Spotlight>
     <!--
             Only apply spotlight on nose area
@@ -313,14 +275,14 @@
     <!--
             Blush color RGB
         -->
-        <uint8 name="Blush_R"> 254 </uint8>
-        <uint8 name="Blush_G"> 80 </uint8>
-        <uint8 name="Blush_B"> 80 </uint8>
+    <uint8 name="Blush_R">254</uint8>
+    <uint8 name="Blush_G">80</uint8>
+    <uint8 name="Blush_B">80</uint8>
   </Blush>
   <Path>
     <!--
             Saving path for bin file (only used in platform decoupling library)
         -->
-    <string name="Bin_File_Saving_Path">/vendor/etc/camera/</string>
+    <string name="Bin_File_Saving_Path">/data/vendor/camera/beautiful</string>
   </Path>
 </TuningInterface>
