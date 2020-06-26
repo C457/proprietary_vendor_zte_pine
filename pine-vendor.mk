@@ -1325,15 +1325,15 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libantradio \
-    libsdm-disp-vndapis \
-    DtsUltra \
-    NfcNci_zte \
-    QtiTelephonyService \
-    uceShimService \
-    CNEService \
-    com.qualcomm.location \
-    dpmserviceapp \
-    ims \
-    qcrilmsgtunnel \
-    PowerOffAlarm \
-    TimeService
+    libsdm-disp-vndapis
+    #DtsUltra \
+    #NfcNci_zte \
+    #QtiTelephonyService \
+    #uceShimService \
+    #CNEService \
+    #com.qualcomm.location \
+    #dpmserviceapp \
+    #ims \
+    #qcrilmsgtunnel \
+    #PowerOffAlarm \
+    #TimeService
